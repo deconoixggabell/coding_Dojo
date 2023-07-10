@@ -1,0 +1,12 @@
+{
+    "editor.semanticTokenColorCustomizations": {},
+    "editor.tokenColorCustomizations": {},
+    "workbench.iconTheme": "vs-seti",
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#2D3006",
+        "titleBar.activeBackground": "#3F4309",
+        "titleBar.activeForeground": "#FAFCE6"
+    },
+    "workbench.colorTheme": "Noctis Obscuro",
+    "typescript.inlayHints.enumMemberValues.enabled": false
+}

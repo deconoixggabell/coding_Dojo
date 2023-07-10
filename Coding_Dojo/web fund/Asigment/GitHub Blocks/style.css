@@ -1,0 +1,82 @@
+/*
+I use more classes than needed cause
+ i need practice with classes and ids
+ i comanted what i did before i figuered it out
+ oh and i did some things differtly with the borders around my images
+ oh and thank you i learn alot from this asignment.
+ it took me two days to figuer it out
+*/
+h1{
+    text-align: center;
+}
+img{
+    height: 200px;
+}
+.octocat{
+    background-color: rgb(237, 230, 230);
+    width: 900px;
+}
+.nav1{
+    background-color: skyblue;
+    display: flex;
+    margin: 20px 20px 20px 20px;
+    justify-content: space-around;
+    border-style: dashed;
+    border-width: 20px;
+    border-color: skyblue;
+}
+/* #nav1_img1{
+    margin: 20px 20px 20px 20px;
+    display: inline-flex;
+    justify-content: left;
+}
+#nav1_img2{
+    margin: 20px 20px 20px 00px;
+    justify-content: center;
+}
+#nav1_img3{
+    margin: 20px 20px 20px 00px;
+    display: inline-flex;
+    justify-content: right;
+} */
+
+.nav2{
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    margin: 20px 20px 20px 20px;
+    justify-content: space-around;
+    border-style: dashed;
+    border-width: 20px;
+    border-color: pink;
+
+}
+/* #nav2_img1{
+    margin: 20px 200px 20px 0;
+}
+#nav2_img2{
+    margin: 20px 20px 20px 20px;
+} */
+.nav3{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 20px 20px 20px;
+    border-style: dashed;
+    border-width: 20px;
+    border-color: white;
+
+}
+/* #nav3_img1{
+    margin: 20px 20px 20px 20px;
+}
+#nav3_img2{
+    margin: 20px 20px 20px 20px;
+}
+#nav3_img3{
+    margin: 20px 20px 20px 20px;
+} */
+p{
+    text-align: center;
+    padding: 0 0 20px 0;
+}

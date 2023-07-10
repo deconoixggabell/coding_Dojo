@@ -1,0 +1,25 @@
+/* cascading style sheet*/
+
+body {
+    background-color: rgb(125, 125, 152);
+}
+h1 {
+    color: aqua;
+    text-align: center;
+}
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+.world {
+    color: brown;
+}
+
+#hello{
+    color: green;
+}
+
+ul>li{
+    color: black;
+}
