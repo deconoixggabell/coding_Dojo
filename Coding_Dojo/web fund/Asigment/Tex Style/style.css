@@ -1,0 +1,15 @@
+h1{
+    background-color: black;
+    font-style: oblique;
+    padding: 0 0 0 20px;
+}
+h2{
+    background-color: blueviolet;
+    text-align: center;
+    font-style: italic;
+}
+h3{
+    background-color: lightblue;
+    text-align: right;
+    padding: 0 20px 0 0;
+}
