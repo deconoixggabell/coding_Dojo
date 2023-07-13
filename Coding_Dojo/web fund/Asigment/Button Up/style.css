@@ -1,9 +1,16 @@
-.button1{
-    border-radius: 50%;
+.button1>button{
+    border-radius: 10px;
+    color: rgb(0,209,178);
 }
-.button2{
+.button2>button{
     border-radius: 50%;
+    color: white;
+    background-color: rgb(0,209,178);
+    border: none;
 }
-.button3{
-    border-radius: 100%;
+.button3>button{
+    box-shadow: 10px 5px 5px 5px;
+    background-color: rgb(43,120,228);
+    border-color: black;
+    color: white;
 }
