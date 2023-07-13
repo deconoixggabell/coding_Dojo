@@ -1,0 +1,14 @@
+.upper_colum{
+    background-color: black;
+    height: 0 auto;
+    display: block;
+}
+.upper_colum>h1{
+    color: white;
+}
+.upper_colum>p{
+    color: rgb(123,123,123);
+}
+#M_profile{
+    color: white;
+}
