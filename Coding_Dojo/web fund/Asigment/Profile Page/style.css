@@ -1,32 +1,18 @@
-.container{
-    height: 100%;
-    width: 100%;
+/* Css Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.upper_colum{
+.nav{
     background-color: black;
-    width: 100%;
-    height: 150px;
+    align-text: center;
 }
-.upper_colum>h1{
-    color: white;
-}
-.upper_colum>p{
-    color: rgb(123,123,123);
-}
-#M_profile{
-    color: white;
-}
-.upper_colum>button{
-    background-color: rgb(21,163,184);
-    color: white;
-}
-
-
-
-.profile{
-    background-color: red;
-    height: 20%;
-    width: 40%;
+.nav p{
     display: flex;
+    color: white;
+}
+.nav h1{
+    color: white;
 }
