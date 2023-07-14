@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+/* Nav bar*/
 .nav{
     background-color: #2b78e4;
     display: flex;
@@ -38,4 +39,55 @@
     color: white;
     position: relative;
     right: 50px;
+}
+
+/* Main Content*/
+
+.main-content{
+    width: 900px;
+        height: 600px;
+        margin: 0 auto;
+        padding: 15px;
+        border-inline: 2px solid black;
+
+}
+
+.main-content img{
+    width: 100%;
+    height: 450px;
+}
+.main-content button{
+    background-color: #6AA84F;
+    color: white;
+    padding: 5px;
+    margin-top: 10px;
+    box-shadow: 4px 4px 2px -3px;
+}
+
+.other-product{
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.product{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+.product{
+    border: 2px solid black;
+    text-align: center;
+}
+
+.product img{
+    height: 200px;
+}
+
+/* footer */
+.footer{
+    background-color:blue ;
+    color: white;
+    text-align: center;
+    
 }
