@@ -59,6 +59,18 @@
     height: 30px;
     width: 100px;
     box-shadow: 5px 5px 5px black;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+#ninja{
+    text-align: center;
+}
+#ninja h1{
+    margin-left: -3px;
+}
+#ninja-p{
+    text-align: center;
+    margin: 40px 0 0 80px;
 }
 
 /* Nav left 1 */
@@ -74,11 +86,23 @@
         height: 30px;
         width: 100px;
         box-shadow: 5px 5px 5px black;
+        margin-top: 20px;
+        margin-bottom: 10px;
+}
+#noun{
+    text-align: center;
+}
+#noun h1{
+    margin-left: -3px;
+}
+#noun-p{
+    text-align: center;
+    margin: 40px 0 0 80px;
 }
 
 /* Nav Right */
 .nav-right{
-    height: 100px;
+    height: 110px;
     width: 300px;
     display: flex;
     flex-direction: column;
@@ -88,7 +112,8 @@
 }
 .nav-right button{
         background-color: rgb(147,196,125);
-        height: 30px;
+        height: 40px;
         box-shadow: 5px 5px 5px black;
-        margin-top: 10px;
+        margin: 10px 0 10px 0;
+        padding: 5px 0 5px 0;
 }
