@@ -16,5 +16,5 @@ function like_1(){
 
 // this controls the third button
 function like_2(){
-    number2.innerText = parseInt(number1.innerText) + 1 + ' Like(s)'
+    number2.innerText = parseInt(number2.innerText) + 1 + ' Like(s)'
 }
