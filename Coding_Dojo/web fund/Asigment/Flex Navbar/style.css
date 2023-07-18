@@ -1,0 +1,18 @@
+.nav{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.nav-title{
+    color: white;
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+}
+/* li{
+    color: white;
+} */
