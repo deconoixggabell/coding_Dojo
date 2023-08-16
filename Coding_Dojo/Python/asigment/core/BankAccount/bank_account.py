@@ -1,18 +1,45 @@
 class BankAccount:
-    # don't forget to add some default values for these parameters!
-    def __init__(self, int_rate) -> None: 
-        self.int_rate = int_rate
-        self.balance = 100
-        # your code here! (remember, instance attributes go here)
-        # don't worry about user info here; we'll involve the User class soon
+    def __init__(self, balance) -> None: 
+        self.int_rate = 0.01
+        self.balance = balance
+
     def deposit(self, amount):
-        new_balence = self.balance + amount
-        return new_balence
-        # your code here
-    deposit(self, amount = 20)
-    # def withdraw(self, amount):
-    #     # your code here
-    # def display_account_info(self):
-    #     # your code here
-    # def yield_interest(self):
-    #     # your code here
+        self.balance += amount
+        print(f"Your Balance is ${amount}")
+    
+    def withdraw(self, amount):
+        if amount < self.balance:
+            self.balance -= amount + 5
+            print(f" Your new Balance: ${self.balance}")
+        else:
+            print("Insufficient funds")
+
+    def display_account_info(self):
+        print(f" balance: {self.balance}")
+
+    def yield_interest(self):
+        if self.balance > 0:
+            interst = self.balance * self.int_rate
+            print(f" You earned ${interst} in interst. New balance: ${self.balance + interst}")
+
+account1 = BankAccount(0)
+account2 = BankAccount(0)
+
+print(f"Your Balance is: ${account1.balance}")
+account1.deposit(1000)
+account1.deposit(300)
+account1.deposit(3000)
+print(f"Your New Balance is: ${account1.balance}")
+account1.withdraw(4000)
+print(f"Your New Balance is: ${account1.balance}")
+account1.yield_interest()
+
+print("-----------------")
+
+print(f"Your Balance is: ${account2.balance}")
+account2.deposit(100)
+account2.deposit(1000)
+print(f"Your New Balance is: ${account2.balance}")
+account2.withdraw(1100.1)
+print(f"Your New Balance is: ${account2.balance}")
+account2.yield_interest()
