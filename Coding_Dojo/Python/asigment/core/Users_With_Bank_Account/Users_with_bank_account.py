@@ -1,8 +1,26 @@
-
 class BankAccount:
     def __init__(self,int_rate, balance) -> None: 
         self.int_rate = int_rate
         self.balance = balance
+
+    def deposit(self, amount):
+        self.balance += amount
+        print(f"Your Balance is ${amount}")
+    
+    def withdraw(self, amount):
+        if amount < self.balance:
+            self.balance -= amount + 5
+            print(f" Your new Balance: ${self.balance}")
+        else:
+            print("Insufficient funds")
+
+    def display_account_info(self):
+        print(f" balance: {self.balance}")
+
+    def yield_interest(self):
+        if self.balance > 0:
+            interst = self.balance * self.int_rate
+            print(f" You earned ${interst} in interst. New balance: ${self.balance + interst}")
 
 class User:
     def __init__(self, name, email):

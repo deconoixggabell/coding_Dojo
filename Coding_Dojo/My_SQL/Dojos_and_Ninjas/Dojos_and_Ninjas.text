@@ -1,0 +1,29 @@
+SELECT * FROM `dojos_and_ninjas_schema`.`Dojos`;
+INSERT INTO `Dojos` (name) VALUE ('Mark'), ('Andrea'), ('Phil');
+DELETE FROM `Dojos` WHERE id=1;
+DELETE FROM `Dojos` WHERE id=2;
+DELETE FROM `Dojos` WHERE id=3;
+INSERT INTO `Dojos` (name) VALUE ('Mark'),('Andrea'),('PHIL'); 
+UPDATE `dojos_and_ninjas_schema`.`Dojos` SET `name` = 'Mark Dojo', `created_at` = '08/27/2023', `updated_at` = '08/27/2023' WHERE (`Id` = '8');
+UPDATE `dojos_and_ninjas_schema`.`Dojos` SET `name` = 'Andrea Karate', `created_at` = '08/27/2023', `updated_at` = '08/27/2023' WHERE (`Id` = '9');
+UPDATE `dojos_and_ninjas_schema`.`Dojos` SET `name` = 'PHIL BBJ', `created_at` = '08/27/2023', `updated_at` = '08/27/2023' WHERE (`Id` = '10');
+
+INSERT INTO `dojos_and_ninjas_schema`.`ninjas` (`Dojo_Id`, `first_name`, `last_name`, `age`, `created_at`, `updated_at`) VALUES ('8', 'mark', 'mayer', '40', '08/27/2023', '08/27/2023');
+INSERT INTO `dojos_and_ninjas_schema`.`ninjas` (`Dojo_Id`, `first_name`, `last_name`, `age`, `created_at`, `updated_at`) VALUES ('8', 'fred', 'hope', '5', '08/27/2023', '08/27/2023');
+INSERT INTO `dojos_and_ninjas_schema`.`ninjas` (`Dojo_Id`, `first_name`, `last_name`, `age`, `created_at`, `updated_at`) VALUES ('8', 'boby', 'rig', '10', '08/27/2023', '08/27/2023');
+
+INSERT INTO `dojos_and_ninjas_schema`.`ninjas` (`Dojo_Id`, `first_name`, `last_name`, `age`, `created_at`, `updated_at`) VALUES ('9', 'hope', 'summer', '16', '08/27/2023', '08/27/2023');
+INSERT INTO `dojos_and_ninjas_schema`.`ninjas` (`Dojo_Id`, `first_name`, `last_name`, `age`, `created_at`, `updated_at`) VALUES ('9', 'peter', 'parker', '17', '08/27/2023', '08/27/2023');
+INSERT INTO `dojos_and_ninjas_schema`.`ninjas` (`Dojo_Id`, `first_name`, `last_name`, `age`, `created_at`, `updated_at`) VALUES ('9', 'jay', 'jona', '60', '08/27/2023', '08/27/2023');
+
+INSERT INTO `dojos_and_ninjas_schema`.`ninjas` (`Dojo_Id`, `first_name`, `last_name`, `age`, `created_at`, `updated_at`) VALUES ('10', 'miles', 'morales', '15', '08/27/2023', '08/27/2023');
+INSERT INTO `dojos_and_ninjas_schema`.`ninjas` (`Dojo_Id`, `first_name`, `last_name`, `age`, `created_at`, `updated_at`) VALUES ('10', 'boy', 'wonder', '7', '08/27/2023', '08/27/2023');
+INSERT INTO `dojos_and_ninjas_schema`.`ninjas` (`Dojo_Id`, `first_name`, `last_name`, `age`, `created_at`, `updated_at`) VALUES ('10', 'bat', 'man', '35', '08/27/2023', '08/27/2023');
+
+SELECT * FROM `dojos_and_ninjas_schema`.`ninjas` WHERE Dojo_Id=8;
+SELECT * FROM `dojos_and_ninjas_schema`.`ninjas` WHERE Dojo_Id=9;
+SELECT * FROM `dojos_and_ninjas_schema`.`ninjas` WHERE Dojo_Id=10;
+
+
+SELECT ninjas.*,ninjas.Dojo_Id, Dojos.* FROM `ninjas` JOIN `Dojos` ON ninjas.Dojo_Id = Dojos.Id WHERE ninjas.Dojo_Id=6;
+SELECT ninjas.*,ninjas.Dojo_Id, Dojos.* FROM `ninjas` JOIN `Dojos` ON ninjas.Dojo_Id = Dojos.Id;
