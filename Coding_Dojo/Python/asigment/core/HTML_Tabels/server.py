@@ -12,5 +12,5 @@ def HTML_Table():
 
     return render_template("index.html", users=users)
 
-if __name__=='__Main__':
+if __name__=='__main__':
     app.run(debug=True, port=8000)
