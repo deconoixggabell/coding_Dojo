@@ -5,17 +5,22 @@ app.secret_key="Nun of visits"
 
 @app.route('/')
 def index():
-    if "counter" not in session:
-        session["counter"] = 0
-    else:
-        session['count'] =+ 1
+    if "count" not in session:
+        session['count'] = 0
+    # else:
+    #     session['count'] =+ 1
     return render_template("index.html")
 
+@app.route('/increment')
+def increment():
+    session['count'] += 1
+    return redirect('/')
+
 @app.route('/reset')
-def increament():
+def reset():
     session.clear()
     return redirect('/')
 
 
-if __name__=='__Main__':
+if __name__=='__main__':
     app.run(debug=True, port=8000)
