@@ -16,6 +16,7 @@
 </head>
     <body>
         <div class="col-6  mx-auto my-5">
+            <h1>All users</h1>
             <table class="table table-hover">
                 <header class="table_heandre">
                     <th>ID</th>
@@ -23,15 +24,21 @@
                     <th>Last Name</th>
                     <th>Email</th>
                     <th>Created At</th>
+                    <th>Updated At</th>
                 </header>
                 <tbody>
+                    {% for user in users %}
                     <tr>
-                        <td></td>
-                        <td></td>
+                        <td>{{user.first_name}}</td>
+                        <td>{{user.last_name}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.created_at}}</td>
+                        <td>{{user.updated_at}}</td>
                     </tr>
+                    {% endfor %}
                 </tbody>
             </table>
-            <a href="/asigment/core/user_cr/templates/create.html">Add New user</a>
+            <a href="/asigment/core/user_cr/templates/">Add New user</a>
         </div>
     </body>
 </html>
