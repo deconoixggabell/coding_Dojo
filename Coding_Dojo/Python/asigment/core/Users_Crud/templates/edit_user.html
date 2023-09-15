@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/users/edit/" method="post" class="col-6 mx-auto">
+    <form action="/users/update/" method="post" class="col-6 mx-auto">
         <h1 class="text-center">Edit user</h1>
         <input type="hidden" name="id" value="{{user.id}}">
         <div class="form-group">
@@ -22,9 +22,7 @@
             <label for="email">Email</label>
             <input type="text" name="email" class="form-control" value={{user.email}}>
         </div>
-        <a href="'/users/update/',methods=['POST']">
-            <input type="submit" value="Update User" class="btn btn-success">
-        </a>
+        <input type="submit" value="Update User" class="btn btn-success">
     </form>
 </body>
 </html>
