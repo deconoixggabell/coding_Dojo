@@ -1,12 +1,13 @@
 from flask import Flask, render_template
 app = Flask(__name__)
+
 @app.route('/')
 def index():
     return render_template("index.html", phase="hello", times=5)
 
 @app.route('/play')
 def play_1():
-    return render_template("index.html", nim=3, color="blue")
+    return render_template("index.html", num=3, color="blue")
 
 @app.route('/play/num')
 def play_2(num):
