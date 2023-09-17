@@ -1,7 +1,7 @@
 from flask import render_template,request, redirect, session, flash, Request
 from flask_app import app 
-from flask_bcrypt import bcrypt
-# bcrypt = bcrypt(app)
+from flask_bcrypt import Bcrypt
+bcrypt = Bcrypt(app)
 from flask_app.models.user import User
 
 
@@ -11,9 +11,9 @@ def index():
 
 @app.route('/index')
 def reg_log():
-    return render_template("index.html")
+    return render_template('index.html')
 
-@app.route('/index/register',method=['POST'])
+@app.route('/index/register/',methods=['POST'])
 def register():
     if not User.is_valid(request.form):
         return redirect('/')
@@ -25,10 +25,9 @@ def register():
     }
     id = User.add(data)
     session['user_id'] = id
-
     return redirect('/home')
 
-@app.route('/login',method=['POST'])
+@app.route('/login/',methods=['POST'])
 def login():
     user = User.get_email(request.form)
     if not user:
@@ -40,7 +39,7 @@ def login():
     session['user_id'] = user.id
     return redirect('/home')
 
-@app.routr('/home')
+@app.route('/home')
 def home():
     if 'user_id' not in session:
         return redirect('/logout')

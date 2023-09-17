@@ -7,17 +7,9 @@
     <title>Document</title>
 </head>
 <body style="display: flex;">
-    <form action='/index/register' method="post" class="col-6 mx-auto">
+    <form action='/index/register/' methods="post" class="col-6 mx-auto">
         <h1>Resgister</h1>
-        {% with messages = get_flashed_messages(category_filter=['register']) %}
-            {% if messages %}
-            <div class="alart-danger" role="alart">
-                <strong>Flash ahhhhhhh!!!</strong>
-                {% for message in messsages %}
-                <p>{{message}}</p>
-            </div>
-            {% endif %}
-        {% endwith %}
+
         <div class="form-group">
             <label for="first_name">First Name</label>
             <input type="text" name="first_name" class="form-control">
@@ -40,17 +32,9 @@
         </div>
             <button>register</button>
     </form>
-    <form action='/login' method="post" class="col-6 mx-auto">
+    <form action='/login' methods="post" class="col-6 mx-auto">
         <h1>Login</h1>
-        {% with messages = get_flashed_messages(category_filter=['login']) %}
-        {% if messages %}
-        <div class="alart-danger" role="alart">
-            <strong>Flash ahhhhhhh!!!</strong>
-            {% for message in messsages %}
-            <p>{{message}}</p>
-        </div>
-        {% endif %}
-    {% endwith %}
+
         <div class="form-group">
             <label for="user_name">email:</label>
             <input type="text" name="user_name" class="form-control">
