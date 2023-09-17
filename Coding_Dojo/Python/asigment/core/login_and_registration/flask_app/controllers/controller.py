@@ -7,9 +7,9 @@ from flask_app.models.user import User
 
 @app.route('/')
 def index():
-    return redirect('/index')
+    return redirect('/index/')
 
-@app.route('/index')
+@app.route('/index/')
 def reg_log():
     return render_template('index.html')
 
@@ -25,9 +25,9 @@ def register():
     }
     id = User.add(data)
     session['user_id'] = id
-    return redirect('/home')
+    return redirect('/home/')
 
-@app.route('/login/',methods=['POST'])
+@app.route('/login',methods=['POST'])
 def login():
     user = User.get_email(request.form)
     if not user:
@@ -37,18 +37,18 @@ def login():
         flash("wrong password")
         return redirect('/')
     session['user_id'] = user.id
-    return redirect('/home')
+    return redirect('/home/')
 
-@app.route('/home')
+@app.route('/home/')
 def home():
     if 'user_id' not in session:
-        return redirect('/logout')
+        return redirect('/logout/')
     data = {
         "id":['user_id']
     }
     return render_template("home.html", User = User.get_id(data))
 
-@app.route('/logout')
+@app.route('/logout/')
 def logout():
     session.clear()
     return redirect('/')
