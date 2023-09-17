@@ -1,8 +1,9 @@
 from flask import render_template,request, redirect, session, flash, Request
 from flask_app import app 
 from flask_bcrypt import bcrypt
+# bcrypt = bcrypt(app)
 from flask_app.models.user import User
-bcrypt = bcrypt(app)
+
 
 @app.route('/')
 def index():

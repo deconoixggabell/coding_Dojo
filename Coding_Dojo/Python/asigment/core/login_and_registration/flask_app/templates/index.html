@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body style="display: flex;">
-    <form action='/users/create/' method="post" class="col-6 mx-auto">
+    <form action='/index/register' method="post" class="col-6 mx-auto">
         <h1>Resgister</h1>
         {% with messages = get_flashed_messages(category_filter=['register']) %}
             {% if messages %}
@@ -40,7 +40,7 @@
         </div>
             <button>register</button>
     </form>
-    <form action="" method="post" class="col-6 mx-auto">
+    <form action='/login' method="post" class="col-6 mx-auto">
         <h1>Login</h1>
         {% with messages = get_flashed_messages(category_filter=['login']) %}
         {% if messages %}
