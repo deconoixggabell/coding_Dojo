@@ -14,7 +14,7 @@ class User:
 
     @classmethod
     def add(cls, data):
-        query = "INSERT INTO reg_login.users (first_name, last_name, email,password,created_at) VALUES(%(first_name)s,%(last_name)s,%(email)s,%(password)s,NOW());"
+        query = "INSERT INTO users (first_name, last_name, email,password,created_at) VALUES(%(first_name)s,%(last_name)s,%(email)s,%(password)s,NOW());"
         result = connectToMySQL('reg_login').query_db(query,data)
         return result
     
@@ -32,36 +32,40 @@ class User:
     
     @classmethod
     def get_id(cls,data):
-        query = "SELECT * FROM reg_login.users WHERE id = %(id)s;"
+        query = "SELECT * FROM users WHERE id = %(id)s;"
         result = connectToMySQL('reg_login').query_db(query,data)
         return cls(result[0])
 
+
     @classmethod
     def get_email(cls,data):
-        query = "SELECT * FROM reg_login.users WHERE email = %(email)s;"
+        query = "SELECT * FROM users WHERE email = %(email)s;"
         result = connectToMySQL('reg_login').query_db(query,data)
+        # print(result,"///////////////////HERE")
         if len(result) < 1:
             return False
         return cls(result[0])
     
     @staticmethod
-    def validate_reg(user):
+    def is_valid(user):
         is_valid = True
-        query = "SELECT * FROM reg_login.users WHERE email = %(email)s;"
-        result = connectToMySQL(User.reg_login).query_db(query,user)
+        query = "SELECT * FROM users WHERE email = %(email)s;"
+        result = connectToMySQL('reg_login').query_db(query,user)
         if len(result) > 1:
             flash("Email taken.")
-            is_calide = False
+            is_valid = False
         if not EMAIL_REGEX.match(user['email']):
             flash("email cann't be used")
             is_valid = False
-        if len(user['first_name'] < 1):
+        num = 1
+        num2 = 8
+        if len(user['first_name']) < num:
             flash("First name must be more than one charactor")
             is_valid = False
-        if len(user['last_name'] < 1):
+        if len(user['last_name']) < num:
             flash("Last name must be more than 1 charactor")
             is_valid = False
-        if len(user['Password'] < 8):
+        if len(user['password']) < num2:
             flash("password must be at leat 8 charactor")
             is_valid = False
         if user['password'] != user['confirm_password']:

@@ -13,7 +13,7 @@ def index():
 def reg_log():
     return render_template('index.html')
 
-@app.route('/index/register/',methods=['POST'])
+@app.route('/index/register/',methods=["POST"])
 def register():
     if not User.is_valid(request.form):
         return redirect('/')
@@ -27,7 +27,7 @@ def register():
     session['user_id'] = id
     return redirect('/home/')
 
-@app.route('/login',methods=['POST'])
+@app.route('/login/',methods=["POST"])
 def login():
     user = User.get_email(request.form)
     if not user:
@@ -44,9 +44,9 @@ def home():
     if 'user_id' not in session:
         return redirect('/logout/')
     data = {
-        "id":['user_id']
+        "id":session['user_id']
     }
-    return render_template("home.html", User = User.get_id(data))
+    return render_template("home.html", user = User.get_id(data))
 
 @app.route('/logout/')
 def logout():

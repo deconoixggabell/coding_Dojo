@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body style="display: flex;">
-    <form action='/index/register' methods="post" class="col-6 mx-auto">
+    <form action='/index/register', method="POST" class="col-6 mx-auto">
         <h1>Resgister</h1>
 
         <div class="form-group">
@@ -20,7 +20,7 @@
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="text" name="email" class="form-control">
+            <input type="email" name="email" class="form-control">
         </div>
         <div class="form-group">
             <label for="password">Password</label>
@@ -28,16 +28,16 @@
         </div>
         <div class="form-group">
             <label for="confirm_password">Confirm Password</label>
-            <input type="password" name="Confirm Password" class="form-control">
+            <input type="password" name="confirm_password" class="form-control">
         </div>
             <button>register</button>
     </form>
-    <form action='/login' methods="post" class="col-6 mx-auto">
+    <form action='/login', method="POST" class="col-6 mx-auto">
         <h1>Login</h1>
 
         <div class="form-group">
             <label for="user_name">email:</label>
-            <input type="text" name="user_name" class="form-control">
+            <input type="text" name="email" class="form-control">
         </div>
         <div class="form-group">
             <label for="password">Password:</label>
